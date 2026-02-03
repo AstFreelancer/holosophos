@@ -26,7 +26,7 @@ class Settings(BaseSettings):
 
     VERBOSITY_LEVEL: int = logging.INFO
 
-    MANAGER_MAX_ITERATIONS: int = 3
+    MANAGER_MAX_ITERATIONS: int = 100
     MANAGER_PLANNING_INTERVAL: int = 9
     MANAGER_TOOLS: Sequence[str] = (
         "bash",
@@ -35,7 +35,7 @@ class Settings(BaseSettings):
         "describe_image",
     )
 
-    LIBRARIAN_MAX_ITERATIONS: int = 3
+    LIBRARIAN_MAX_ITERATIONS: int = 150
     LIBRARIAN_PLANNING_INTERVAL: int = 9
     LIBRARIAN_TOOLS: Sequence[str] = (
         "arxiv_download",
@@ -54,7 +54,7 @@ class Settings(BaseSettings):
         "yt_transcript",
     )
 
-    MLE_SOLVER_MAX_ITERATIONS: int = 3
+    MLE_SOLVER_MAX_ITERATIONS: int = 200
     MLE_SOLVER_PLANNING_INTERVAL: int = 14
     MLE_SOLVER_TOOLS_REMOTE: Sequence[str] = (
         "remote_bash",
@@ -78,7 +78,7 @@ class Settings(BaseSettings):
     )
     MLE_SOLVER_IS_REMOTE: bool = False
 
-    WRITER_MAX_ITERATIONS: int = 3
+    WRITER_MAX_ITERATIONS: int = 100
     WRITER_PLANNING_INTERVAL: int = 9
     WRITER_TOOLS: Sequence[str] = (
         "get_latex_template",
@@ -91,7 +91,7 @@ class Settings(BaseSettings):
         "describe_image",
     )
 
-    PROPOSER_MAX_ITERATIONS: int = 3
+    PROPOSER_MAX_ITERATIONS: int = 200
     PROPOSER_PLANNING_INTERVAL: int = 9
     PROPOSER_TOOLS: Sequence[str] = (
         "web_search",
@@ -103,7 +103,7 @@ class Settings(BaseSettings):
         "text_editor",
     )
 
-    REVIEWER_MAX_ITERATIONS: int = 3
+    REVIEWER_MAX_ITERATIONS: int = 50
     REVIEWER_PLANNING_INTERVAL: int = 9
     REVIEWER_TOOLS: Sequence[str] = (
         "review_pdf_paper",
