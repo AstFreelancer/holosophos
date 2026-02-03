@@ -43,7 +43,12 @@ def compose_main_agent(
         max_completion_tokens=max_completion_tokens,
         max_history_tokens=max_history_tokens,
     )
-
+    code_model = LLM(
+        model_name=settings.CODE_MODEL_NAME,
+        max_completion_tokens=settings.CODE_MAX_COMPLETION_TOKENS,
+        max_history_tokens=settings.CODE_MAX_HISTORY_TOKENS,
+    )
+        
     librarian_agent = get_librarian_agent(
         model=model,
         verbosity_level=verbosity_level,
@@ -52,7 +57,7 @@ def compose_main_agent(
         tools=settings.LIBRARIAN_TOOLS,
     )
     mle_solver_agent = get_mle_solver_agent(
-        model=model,
+        model=code_model,
         max_iterations=settings.MLE_SOLVER_MAX_ITERATIONS,
         verbosity_level=verbosity_level,
         planning_interval=settings.MLE_SOLVER_PLANNING_INTERVAL,

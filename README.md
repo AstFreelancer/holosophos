@@ -7,6 +7,10 @@ Built on top of:
 - [Academia MCP server](https://github.com/IlyaGusev/academia_mcp)
 - [MLE kit MCP server](https://github.com/IlyaGusev/mle_kit_mcp)
 
+### Model configuration
+- `MODEL_NAME`: default model used by manager and most agents.
+- `CODE_MODEL_NAME`: optional dedicated model for the code-heavy `mle_solver` agent.
+- `CODE_MAX_COMPLETION_TOKENS`, `CODE_MAX_HISTORY_TOKENS`: options for the code model.
 
 ### Features
 - **Manager agent**: Orchestrates task flow across specialized agents.
