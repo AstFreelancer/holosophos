@@ -62,6 +62,9 @@ MLE_KIT_MCP_URL=http://0.0.0.0:5057/mcp
 
 # App options
 MODEL_NAME=deepseek/deepseek-chat-v3.1
+CODE_MODEL_NAME=openai/gpt-5.2-chat
+CODE_MAX_COMPLETION_TOKENS=16384
+CODE_MAX_HISTORY_TOKENS=131072
 PORT=5055
 ```
 
